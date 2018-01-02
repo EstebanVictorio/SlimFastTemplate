@@ -36,6 +36,7 @@ All credits go to their respective owners.
 As an example of this, you can bootstrap your app in a very simple way, as the one performed in the index file:
 
 ```php
+<?php
 // First, we gather every setting we defined on our Config file
 require_once 'Source\Config\Config.php';  
 // Then we require our Bootstrapper Class which helps us retrieve everything we need according to our app  
@@ -56,6 +57,60 @@ $kickstartSuccess = Bootstrapper::kickStart
 ```
 
 If you wish to use your own kickstarting approach, go ahead. 
+
+
+## Additional Configuration
+
+If you wish, you can set your own additional configuration in the Config class located in the Config folder:
+
+```php
+<?php
+
+namespace Source\Config;
+class Config
+{
+    public static $generalSettings =
+        [
+            'isDebugEnabled' => true
+        ];
+    public static $slimSettings =
+        [
+            'displayErrorDetails' => true, // set to false in production
+            'addContentLengthHeader' => false, // Allow the web server to send the content-length header
+            'determineRouteBeforeAppMiddleware' => true,
+
+        ];
+    public static $debugSettings =
+        [
+
+        ];
+    // TODO: Set your additional settings from here and onward
+}
+```
+
+After setting your configuration settings (as a public static array), you may retrieve the information later
+on the Bootstrapper class, which is known to pass the initial configuration to the classes later.
+
+
+## Definitions
+This section is meant to serve the mere purpose of giving our code the notion of what we are handling in that moment for
+the developer. This means that, when writing, we know what we refer to; hence, a good programming culture may arise
+from everyone in the project, although you can define your own when customizing the template for your own purposes.
+
+An example of this are the Template paths:
+
+```php
+<?php
+
+namespace Source\Definition;
+
+class Template
+{
+    // A constant definition for our index page template
+    // We can retrieve it later by the class reference with Template::INDEX_PAGE
+    const INDEX_PAGE = 'Templates/index.html.twig';
+}
+```
 
 ## About Upcoming Updates
 I'll keep this template updated as much as I can and If you have any questions or problems or comments about it, feel
