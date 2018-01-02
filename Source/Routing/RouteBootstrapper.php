@@ -58,11 +58,12 @@ class RouteBootstrapper
             $indexPageController = new ViewController\IndexPageController($this, $request, $response, $params);
             $indexPageController->render();
         });
+        // TODO: Write your view requests routes from here and onward
     }
 
     private function _registerProcessingRoutes()
     {
-
+        // TODO: Write any particular requests routes from here and onward
     }
 
 }
