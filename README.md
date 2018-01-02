@@ -57,16 +57,14 @@ $kickstartSuccess = Bootstrapper::kickStart
 
 If you wish to use your own kickstarting approach, go ahead. 
 
-
-
-##About Upcoming Updates
+## About Upcoming Updates
 I'll keep this template updated as much as I can and If you have any questions or problems or comments about it, feel
 free to let me know. :)
 
 Best Regards!
 
 #### Sincerely,
-#####Esteban Victorio
+##### Esteban Victorio
 
 
 # License
