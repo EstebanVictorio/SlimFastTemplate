@@ -7,7 +7,6 @@ $kickstartSuccess = Bootstrapper::kickStart
 (
     [
         'generalSettings' => \Source\Config\Config::$generalSettings,
-        'gsrDebugSettings' => \Source\Config\Config::$gsrDebugSettings,
         'slimSettings' => \Source\Config\Config::$slimSettings
     ]
 );

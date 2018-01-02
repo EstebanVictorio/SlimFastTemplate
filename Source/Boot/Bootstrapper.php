@@ -24,10 +24,7 @@ class Bootstrapper
      */
     private static $canKickStart = false;
 
-    /**
-     * @var bool Determines if GSR debugging can be booted
-     */
-    private static $gsrDebugBooted = false;
+
 
     /**
      * @var $slimApp App
@@ -57,7 +54,7 @@ class Bootstrapper
      */
     public static function kickStart($settings)
     {
-        self::_bootDebug($settings['generalSettings'], $settings['gsrDebugSettings']);
+        self::_bootDebug($settings['generalSettings'], $settings['debugSettings']);
         self::_gatherSlimResources();
         self::_configureAutoload();
         self::_bootSlimApp($settings['slimSettings']);
@@ -69,13 +66,13 @@ class Bootstrapper
     /**
      * Enables Overall Debugging
      * @param $generalSettings array General Settings for runtime
-     * @param $gsrDebugSettings array GSR Settings for runtime
+     * @param $debugSettings array Settings for runtime
      * @return bool
      */
-    private static function _bootDebug($generalSettings, $gsrDebugSettings)
+    private static function _bootDebug($generalSettings, $debugSettings)
     {
         self::_bootPHPDebug($generalSettings['isDebugEnabled']);
-        return self::_bootGSRDebug($gsrDebugSettings);
+        return self::_bootCustomDebug($debugSettings);
     }
 
     /**
@@ -90,13 +87,13 @@ class Bootstrapper
     }
 
     /**
-     * Boots GSR Debug
-     * @param $gsrDebugSettings
+     * Boots Custom Debug
+     * @param $debugSettings
      * @return bool
      */
-    private static function _bootGSRDebug($gsrDebugSettings)
+    private static function _bootCustomDebug($debugSettings)
     {
-        return self::$gsrDebugBooted;
+        return self::$debugBooted;
     }
 
     /**

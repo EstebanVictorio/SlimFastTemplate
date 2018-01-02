@@ -2,6 +2,5 @@
 /logs/*
 !/logs/README.md
 /.idea
-GSR-PHP.iml
 /.htaccess
 /composer.*

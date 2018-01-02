@@ -15,7 +15,7 @@ class Config
             'determineRouteBeforeAppMiddleware' => true,
 
         ];
-    public static $gsrDebugSettings =
+    public static $debugSettings =
         [
 
         ];
