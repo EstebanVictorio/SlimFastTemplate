@@ -5,6 +5,15 @@ An Easy Slim Framework Template Implementation to fasten development in PHP with
 All credits on Slim Framework goes to the authors on [Slim Framework](https://www.slimframework.com/), whic was Created and is currently maintained by Josh Lockhart, Andrew Smith, Rob Allen, and the Slim Framework Team. Further info on their site.
 
 
+## Template Main Structure
+    .
+    ├── Boot                  # Anything related to kickstart an app
+    ├── Config                # Configuration Settings
+    ├── Definition            # "Enum" like Definitions, to avoid hardcoded paths and the like
+    ├── Exceptions            # Exceptions/Errors related to an app, as well as the ExceptionHandler 
+    ├── MVC                   # MVC Pattern Utilities
+    └── Routing               # Anything related to an app routes, such as Views or Processing Requests
+
 
 # License
 
