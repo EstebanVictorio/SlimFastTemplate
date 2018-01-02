@@ -54,7 +54,7 @@ class Bootstrapper
      */
     public static function kickStart($settings)
     {
-        // First, we set our debug 
+        // First, we set our debug
         self::_bootDebug($settings['generalSettings'], $settings['debugSettings']);
         self::_gatherSlimResources();
         self::_configureAutoload();

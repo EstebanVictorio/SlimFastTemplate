@@ -20,7 +20,8 @@ In order to use this template, the following are required:
 * [Slim](https://www.slimframework.com/): The main framework of this project template, mentioned above.
 * [Twig](https://twig.symfony.com/): A PHP Template Engine.
 
-All credits go to their respective owners.
+All credits go to their respective owners. To use this template, you must prepare your environment on your project so
+it supports the requirements above.
 
 ## Template Main Structure
     .
